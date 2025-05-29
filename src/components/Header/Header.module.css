@@ -1,0 +1,49 @@
+.homeimg {
+    display: flex;
+    width: 100%;
+}
+
+.INV {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 30px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 200px;
+
+
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+
+       
+
+
+
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    /* Ajuste a posição conforme necessário */
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    /* Está acima da imagem */
+
+}

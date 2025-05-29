@@ -1,0 +1,23 @@
+.homeimg {
+    display: flex;
+    width: 100%;
+}
+
+.INV {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 30px;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    /* Ajuste a posição conforme necessário */
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    /* Está acima da imagem */
+
+}
