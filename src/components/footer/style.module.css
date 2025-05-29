@@ -1,0 +1,51 @@
+.invFooter {
+  background: linear-gradient(to right, #d62828, #003f88);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footerContainer h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footerContainer p {
+  margin-bottom: 20px;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.footerLinks a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: #ffd700; /* dourado no hover */
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.3);
+  width: 80%;
+  margin: auto;
+}
+
+.footerCopy {
+  font-size: 14px;
+  margin-top: 20px;
+}
