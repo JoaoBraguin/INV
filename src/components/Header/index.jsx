@@ -5,19 +5,19 @@ import INV from '../../images/INV.png'
 
 export default function Header() {
   return (
+
     <header className={style.header}>
       <nav className={style.nav}>
         <div className={style.INV}>
           <img src={INV} />
         </div>
-        <hr />
+        <hr/>
         <div className={style.links}>
           <Link className={style.principal} to="/">Home</Link>
-          <Link to="/Produtos">Produtos</Link>
-          <Link to="/categorias">Categorias</Link>
+          <Link to="/Produtos">Products</Link>
+          <Link to="/categorias">Catogory</Link>
         </div>
       </nav>
-
     </header>
   )
 }

@@ -25,13 +25,17 @@
         color: white;
         font-size: 20px;
 
-       
+        &::after {
+            content: '';
+            background-color: #ECBD64;
+            display: block;
+            height: 3px;
+            width: 0;
+            transition: ease-in-out 0.6s;
+        }
 
-
-
-
-        &:hover {
-            text-decoration: underline;
+        &:hover::after {
+            width: 100%;
         }
     }
 
