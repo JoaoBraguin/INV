@@ -9,6 +9,7 @@
     flex-direction: column;
     color: white;
     font-size: 30px;
+    margin-right: 20px;
 }
 
 .links {
@@ -38,6 +39,7 @@
             width: 100%;
         }
     }
+
 
 }
 

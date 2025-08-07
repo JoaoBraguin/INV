@@ -5,7 +5,6 @@ import Footer from "../components/footer";
 import munhequeira from '../images/munhequeira.png'
 import tenis1 from '../images/tenis1.png'
 import camisalakers from '../images/camisalakers.png'
-import pulseira from '../images/Pulseira.png'
 import Pulseira from '../images/Pulseira.png'
 import kneebrace from '../images/kneebrace.png'
 import camisachicago from '../images/camisachicago.png'
@@ -51,7 +50,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-         <h2 className={style.about}>Acessory</h2>
+        
       <section className={style.cardsblack}>
         <div className={style.card1}>
           <div>
