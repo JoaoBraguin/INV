@@ -4,7 +4,14 @@ body {
 
 .homeimg {
     display: flex;
-    width: 100%;
+     
+   
+
+    img {
+        display: flex;
+        width: 100%;
+    }
+
 }
 
 .especialimg {
@@ -53,39 +60,17 @@ body {
 
 }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 200px;
-    margin: 5%;
 
-
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-    }
-
-    h6 {
-        margin: 7px;
-        font-weight: 50;
-    }
-
-    h2 {
-        font-weight: 100;
-    }
-}
 
 .cardespecial {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 180px;
-    margin-top: -55px;
-    
-    
+    margin-top: 20px;
+    background-color: #2C2C2C;
+
+
 
 
     p {
@@ -93,56 +78,54 @@ body {
         align-items: center;
         justify-content: center;
         margin: 10px;
+        font-family: "Inter", sans-serif;
+        font-style: italic;
     }
 
     h6 {
         margin: 7px;
-        font-weight: 50;
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
     }
 
     h2 {
-        font-weight: 100;
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
     }
 }
 
-.card1 {
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
 
-    hr {
-        margin: 15px;
-    }
-}
 
-.card2 {
+.cards2 {
 
-    position: absolute;
-    margin: 250px;
-    left: 390px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    margin-top: 0.0%;
+    background-color: #2C2C2C;
+    height: 600px;
 
-    hr {
-        margin: 15px;
-    }
-    p{
+    p {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: "Inter", sans-serif;
+        font-style: italic;
     }
-    h2{
-         display: flex;
-        align-items: center;
-        justify-content: center;
+
+    h6 {
+        margin: 7px;
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
     }
-     h6{
-         display: flex;
-        align-items: center;
-        justify-content: center;
+
+    h2 {
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
     }
-    
+
 }
 
 .cardsblack {
@@ -150,13 +133,199 @@ body {
     align-items: center;
     justify-content: center;
     gap: 200px;
-    margin-top: 2%;
+    margin-top: 0.0%;
     background-color: #2C2C2C;
     height: 600px;
 
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", sans-serif;
+        font-style: italic;
+    }
+
+    h6 {
+        margin: 7px;
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+    }
+
+}
+
+.cardsblack2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    margin-top: 0.0%;
+
+    height: 600px;
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter", sans-serif;
+        font-style: italic;
+    }
+
+    h6 {
+        margin: 7px;
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+    }
+
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    margin: 1%;
+
+
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        font-family: "Inter", sans-serif;
+        font-style: italic;
+    }
+
+    h6 {
+        margin: 7px;
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+    }
+}
+
+.cards2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    margin-top: -80px;
+    background-color: #2C2C2C;
+
+
+
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        font-family: "Inter", sans-serif;
+        font-style: italic;
+    }
+
+    h6 {
+        margin: 7px;
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+    }
 }
 
 .about {
-    color: #ECBD64;
-   margin-top: -9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -4%;
+
+
+    h2 {
+        color: #ECBD64;
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+
+    }
+
+    hr {
+        width: 600px;
+    }
 }
+
+.about2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5%;
+
+
+    h2 {
+        color: #ffa600;
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+
+    }
+
+    hr {
+        width: 600px;
+    }
+}
+
+
+
+
+.card1 {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+
+    img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    hr {
+        margin: 15px;
+    }
+
+   
+}
+
+svg {
+    display: flex;
+    margin-left: 160px;
+    color: #ffa600;
+
+}
+
+ h5{
+        display: flex;
+        font-weight: 200;
+        padding: 5px;
+        font-family: "Inter", sans-serif;
+        margin-top: -30px;
+        
+        
+    }

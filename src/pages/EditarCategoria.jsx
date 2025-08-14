@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import style from '../styles/editar.categoria.module.css'
 
 const api = axios.create({
   baseURL: "http://localhost:3333"
