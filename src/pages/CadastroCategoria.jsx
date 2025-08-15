@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from '../components/Header'
+import style from '../styles/CadastroCategoria.module.css'
+import INV from '../images/INV.png'
 
 const api = axios.create({
   baseURL: "http://localhost:3333"
@@ -32,37 +34,51 @@ export default function CadastroCategoria() {
   }
   return (
     <>
-      <Header />
-      <form action="" onSubmit={handleSubmit}>
-        <h2>Cadastro de categoria</h2>
-        <label htmlFor="nome">nome</label>
-        <input type="text"
-          id="nome"
-          placeholder="Digite um nome de categoria"
-          required
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-        />
-        <label htmlFor="descricao">Descrição</label>
-        <textarea
-          name="descricao"
-          id="descricao"
-          value={descricao}
-          placeholder="Digite uma descrição"
-          onChange={(e) => setDescricao(e.target.value)}
-          required
-        />
-        <div className="botoes">
-          <button type="button"
-            onClick={() => navigate(-1)}
-          >
-            Cancelar
-          </button>
-          <button type="submit" disabled={!isValid} >
-            Salvar
-          </button>
-        </div>
-      </form>
+      <dir className={style.gradientbackground}>
+        <form action="" onSubmit={handleSubmit}>
+          <h2>Cadastro de categoria</h2>
+          <hr />
+          <dir className={style.container}>
+            <dir className={style.esq}>
+              <img src={INV} />
+            </dir>
+            <dir className={style.dir}>
+              <dir className={style.campo}>
+                <label htmlFor="nome">Name :</label>
+                <input type="text"
+                  id="nome"
+                  placeholder="Digite um nome de categoria"
+                  required
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                />
+              </dir>
+              <dir className={style.campo}>
+                <label htmlFor="descricao">Description :</label>
+                <textarea
+                  name="descricao"
+                  id="descricao"
+                  value={descricao}
+                  placeholder="Digite uma descrição"
+                  onChange={(e) => setDescricao(e.target.value)}
+                  required
+                />
+              </dir>
+              <div className={style.botoes}>
+                <button type="button"
+                  onClick={() => navigate(-1)}
+                >
+                  Cancelar
+                </button>
+                <button type="submit" disabled={!isValid} >
+                  Salvar
+                </button>
+              </div>
+            </dir>
+          </dir>
+        </form>
+      </dir>
+
     </>
   );
 }

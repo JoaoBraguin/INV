@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import style from '../styles/editar.categoria.module.css'
+import style from '../styles/editarCategoria.module.css'
+import INV from '../images/INV.png'
 
 const api = axios.create({
   baseURL: "http://localhost:3333"
@@ -18,27 +19,27 @@ export default function EditarCategoria() {
 
   async function editarCategoria(e) {
     e.preventDefault();
-  try {
-    await api.put(`/categorias/${id}`, {
-      name: nome,
-      description: descricao
-    })
-    navigate("/categorias")
-  } catch (err) {
-    setErro(erro)
+    try {
+      await api.put(`/categorias/${id}`, {
+        name: nome,
+        description: descricao
+      })
+      navigate("/categorias")
+    } catch (err) {
+      setErro(erro)
+    }
   }
-}
 
- async function deletarCategoria(e) {
-    
-    if(!window.confirm("Tem certeza que deseja excluir esta categoria?"))return;
-  try {
-    await api.delete(`/categorias/${id}`)
-    navigate("/categorias")
-  } catch (err) {
-    setErro(erro)
+  async function deletarCategoria(e) {
+
+    if (!window.confirm("Tem certeza que deseja excluir esta categoria?")) return;
+    try {
+      await api.delete(`/categorias/${id}`)
+      navigate("/categorias")
+    } catch (err) {
+      setErro(erro)
+    }
   }
-}
 
 
 
@@ -59,42 +60,56 @@ export default function EditarCategoria() {
 
   const navigate = useNavigate();
   const isValid = nome.trim() !== "" && descricao.trim() !== "";
-  
-  if(erro.response?.status ===404) {
-    return(
+
+  if (erro.response?.status === 404) {
+    return (
       <h1>Categoria não encontrada</h1>
     )
-  }  
+  }
 
 
   return (
     <>
-      <form action="" onSubmit={editarCategoria}>
-        <h2>Editar Categoria</h2>
-        <label htmlFor="nome">nome</label>
-        <input
-          type="text"
-          id="nome"
-          placeholder="Digite um nome de categoria"
-          required
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-        />
-        <label htmlFor="descricao">Descrição</label>
-        <textarea
-          name="descricao"
-          id="descricao"
-          value={descricao}
-          placeholder="Digite uma descricão"
-          onChange={(e) => setDescricao(e.target.value)}
-          required
-        />
-        <div className="botoes">
-          <button type="button" onClick={() => navigate(-1)}>Cancelar</button>
-          <button type="submit" disabled={!isValid}>Editar</button>
-          <button onClick={()=> deletarCategoria()}>Deletar Categoria</button>
-        </div>
-      </form>
+      <div className={style.gradientbackground}>
+        <form action="" onSubmit={editarCategoria}>
+          <h2>Editar Categoria</h2>
+          <hr />
+          <div className={style.container}>
+            <dir className={style.esq}>
+              <img src={INV} />
+            </dir>
+            <dir className={style.dir}>
+              <div className={style.campo}>
+                <label htmlFor="nome">Name :</label>
+                <input
+                  type="text"
+                  id="nome"
+                  placeholder="Digite um nome de categoria"
+                  required
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                />
+              </div>
+              <div className={style.campo}>
+                <label htmlFor="descricao">Description :</label>
+                <textarea
+                  name="descricao"
+                  id="descricao"
+                  value={descricao}
+                  placeholder="Digite uma descricão"
+                  onChange={(e) => setDescricao(e.target.value)}
+                  required
+                />
+              </div>
+              <div className={style.botoes}>
+                <button type="button" onClick={() => navigate(-1)}>Cancelar</button>
+                <button type="submit" disabled={!isValid}>Editar</button>
+                <button onClick={() => deletarCategoria()}>Deletar Categoria</button>
+              </div>
+            </dir>
+          </div>
+        </form>
+      </div>
     </>
   );
 }

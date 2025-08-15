@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Header from '../components/Header';
+import style from '../styles/CadastroProduto.module.css'
+import INV from '../images/INV.png'
 
 const api = axios.create({
   baseURL: "http://localhost:3333"
@@ -67,80 +69,103 @@ export default function CadastroProduto() {
 
   return (
     <>
-      <Header />
-      <form onSubmit={handleSubmit}>
-        <h2>Cadastro de Produto</h2>
+      <div className={style.gradientbackground}>
+        <form onSubmit={handleSubmit}>
+          <h2>Cadastro de Produto</h2>
+          <hr />
+          <div className={style.container}>
+            <div className={style.dir}>
+              <img src={INV} />
+            </div>
+            <dir className={style.esq}>
+              <dir className={style.campo}>
+                <label htmlFor="nome">Nome</label>
+                <input
+                  type="text"
+                  id="nome"
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                  required
+                />
+              </dir>
 
-        <label htmlFor="nome">Nome</label>
-        <input
-          type="text"
-          id="nome"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-          required
-        />
+              <dir className={style.campo}>
+                <label htmlFor="descricao">Descrição</label>
+                <textarea
+                  id="descricao"
+                  value={descricao}
+                  onChange={(e) => setDescricao(e.target.value)}
+                  required
+                />
+              </dir>
 
-        <label htmlFor="descricao">Descrição</label>
-        <textarea
-          id="descricao"
-          value={descricao}
-          onChange={(e) => setDescricao(e.target.value)}
-          required
-        />
+              <dir className={style.campo}>
+                <label htmlFor="preco">Preço</label>
+                <input
+                  type="number"
+                  step="0.01"
+                  id="preco"
+                  value={preco}
+                  onChange={(e) => setPreco(e.target.value)}
+                  required
+                />
+              </dir>
 
-        <label htmlFor="preco">Preço</label>
-        <input
-          type="number"
-          step="0.01"
-          id="preco"
-          value={preco}
-          onChange={(e) => setPreco(e.target.value)}
-          required
-        />
+              <dir className={style.campo}>
+                <label htmlFor="quantidade">Quantidade</label>
+                <input
+                  type="number"
+                  id="quantidade"
+                  min="0"
+                  value={quantidade}
+                  onChange={(e) => setQuantidade(e.target.value)}
+                />
+              </dir>
 
-        <label htmlFor="quantidade">Quantidade</label>
-        <input
-          type="number"
-          id="quantidade"
-          min="0"
-          value={quantidade}
-          onChange={(e) => setQuantidade(e.target.value)}
-        />
+              <dir className={style.campo}>
+                <label htmlFor="imagem">Imagem do Produto</label>
+                <input
+                  type="file"
+                  id="imagem"
+                  accept="image/*"
+                  onChange={(e) => setImagemFile(e.target.files[0])}
+                  required
+                />
+              </dir>
 
-        <label htmlFor="imagem">Imagem do Produto</label>
-        <input
-          type="file"
-          id="imagem"
-          accept="image/*"
-          onChange={(e) => setImagemFile(e.target.files[0])}
-          required
-        />
+              <dir className={style.campo}>
+                <label htmlFor="categoria">Categoria</label>
+                <select
+                  id="categoria"
+                  value={categoriaId}
+                  onChange={(e) => setCategoriaId(e.target.value)}
+                >
+                 <dir className={style.cat}>
+                   <option value="">Selecione uma categoria</option>
+                 </dir>
+                  {categorias.map(categoria => (
+                    <option key={categoria.id} value={categoria.id}>
+                      {categoria.name}
+                    </option>
+                  ))}
+                </select>
+              </dir>
 
-        <label htmlFor="categoria">Categoria</label>
-        <select
-          id="categoria"
-          value={categoriaId}
-          onChange={(e) => setCategoriaId(e.target.value)}
-        >
-          <option value="">Selecione uma categoria</option>
-          {categorias.map(categoria => (
-            <option key={categoria.id} value={categoria.id}>
-              {categoria.name}
-            </option>
-          ))}
-        </select>
+              <div className={style.botoes}>
+                <button type="button" onClick={() => navigate(-1)}>
+                  Cancelar
+                </button>
+                <button type="submit" disabled={!isValid || uploading}>
+                  {uploading ? "Salvando..." : "Salvar"}
+                </button>
+              </div>
 
-        <div className="botoes">
-          <button type="button" onClick={() => navigate(-1)}>
-            Cancelar
-          </button>
-          <button type="submit" disabled={!isValid || uploading}>
-            {uploading ? "Salvando..." : "Salvar"}
-          </button>
-        </div>
+              {erro && <p style={{ color: 'red' }}>{erro}</p>}
+            </dir>
+          </div>
+        </form>
+      </div>
 
-        {erro && <p style={{ color: 'red' }}>{erro}</p>}
-      </form>
     </>
   );
 }

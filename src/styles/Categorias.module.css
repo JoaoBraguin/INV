@@ -1,0 +1,227 @@
+.imgContainer {
+    position: relative;
+    width: 100%;
+}
+
+.homeimg {
+    width: 100%;
+    display: flex;
+    margin-top: 200px;
+}
+
+
+.sectionWrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 10;
+}
+
+.linha1 {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+
+
+.verticalLine {
+    width: 1.5px;
+    height: 40px;
+    background-color: #ECBD64;
+}
+
+
+.sectionTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+
+.horizontalLine {
+    height: 1.3px;
+    background-color: #FFFFFF;
+    width: 620px;
+}
+
+
+.titleText {
+    white-space: nowrap;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ECBD64;
+    text-shadow: 1px 1px 3px black;
+}
+
+.bloco {
+    background-color: #bfbfbf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: -165px;
+
+
+}
+
+.filho {
+    background-color: #FFFFFF;
+    width: 60%;
+    border-radius: 20px;
+}
+
+
+.card {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+   padding: 20px;
+   border-radius: 12px;
+   margin: 15px;
+   min-height: 200px;
+
+    h1 {
+  color: #ECBD64;
+  font-weight: bold;
+  font-size: 2.3rem;
+  font-weight: 200;
+
+
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000,
+    0 4px 8px rgba(0,0,0,0.7);
+
+    }
+
+    p {
+        background-color: white;
+        width: 1280px;
+        text-align: center;
+        padding: 60px;
+        border-radius: 25px;
+        font-size: 24px;
+    }
+}
+
+.card:nth-child(odd) {
+    background-color: transparent;
+    color: black;
+    
+}
+
+.card:nth-child(even) {
+    background-color: #2C2C2C;
+    padding-top: 40px;
+    height: 370px;
+
+}
+
+.linha2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botaoadd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.botaoadd a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 15px;
+  border: 3px solid transparent;
+
+  
+  background: 
+    linear-gradient(#E2E2E2, #E2E2E2) padding-box,
+    linear-gradient(270deg, blue, red, blue) border-box;
+  background-size: 200% 200%;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+
+  animation: bordaAnimada 5s linear infinite;
+  transition: 0.3s ease;
+}
+
+@keyframes bordaAnimada {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.botaoadd a:hover {
+  transform: scale(1.05);
+}
+
+
+.editButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.editLink {
+  position: relative;
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  background: transparent;
+  z-index: 1;
+  margin-right: 25px;
+}
+
+.editLink::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(270deg, red, blue, red);
+  background-size: 300% 300%;
+  animation: bordaAnimada 5s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0); 
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: -1;
+}
+
+@keyframes bordaAnimada {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.card:nth-child(odd) .editLink {
+  color: black;
+}
+
+.card:nth-child(even) .editLink {
+  color: white;
+}
