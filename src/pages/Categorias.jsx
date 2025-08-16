@@ -4,6 +4,7 @@ import style from '../styles/Categorias.module.css';
 import quadracat from '../images/QuadraCategorias.jpeg'
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import Footer from "../components/footer";
 
 export default function Categorias() {
   const [categorias, setCategorias] = useState([]);
@@ -27,7 +28,7 @@ export default function Categorias() {
 
   return (
     <>
-      <Header titulo="Categorias" />
+      <Header titulo="Category" />
 
       <div className={style.imgContainer}>
         <img className={style.homeimg} src={quadracat} alt="" />
@@ -64,6 +65,7 @@ export default function Categorias() {
           Add
         </Link>
       </div>
+      <Footer />
     </>
   );
 }

@@ -115,7 +115,6 @@ export default function EditarProduto() {
 
   return (
     <>
-      <Header />
       <form onSubmit={editarProduto}>
         <h2>Editar Produto</h2>
 

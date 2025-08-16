@@ -72,7 +72,7 @@ export default function EditarCategoria() {
     <>
       <div className={style.gradientbackground}>
         <form action="" onSubmit={editarCategoria}>
-          <h2>Editar Categoria</h2>
+          <h2>EDIT CATEGORY</h2>
           <hr />
           <div className={style.container}>
             <dir className={style.esq}>

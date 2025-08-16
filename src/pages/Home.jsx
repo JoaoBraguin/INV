@@ -12,7 +12,7 @@ import camisatiffany from '../images/camisatiffany.png'
 import camisaceltics from '../images/camisaceltics.png'
 import especialquadra from '../images/especialquadra.png'
 import tenislebron from '../images/tenislebron.png'
-import { Link } from "react-router-dom";
+
 import { FaRegEdit } from "react-icons/fa";
 
 
@@ -25,6 +25,7 @@ export default function Home() {
       <Header titulo="Home" />
       <div className={style.about2}>
         <h2>New</h2> <hr /> <a href="/produtos">View All</a>
+        <FaRegEdit size={30} />
       </div>
       <section className={style.cardespecial}>
         <div className={style.card1}>
@@ -132,7 +133,7 @@ export default function Home() {
       </section>
       <section className={style.shoeslebron}>
         <div className={style.special}>
-         <h1>Special</h1>
+          <h1>Special</h1>
         </div>
         <div className={style.card2}>
           <img src={tenislebron} alt="" />

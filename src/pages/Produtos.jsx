@@ -34,6 +34,9 @@ import { FaRegEdit } from "react-icons/fa";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaPlusCircle } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import EditarProduto from './EditarProduto';
+
 
 
 
@@ -75,7 +78,7 @@ export default function Produtos() {
           <img src={munhequeira} alt="" />
           <h2>wrist brace</h2>
           <div className={style.icone}>
-            <h6>INV</h6> <a className={style.svgbutton} href=""><FaRegEdit size={30} /></a>
+            <h6>INV</h6> <FaRegEdit size={30} />
             <h5>Quantity : 19</h5>
           </div>
           <hr />

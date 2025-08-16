@@ -71,7 +71,7 @@ export default function CadastroProduto() {
     <>
       <div className={style.gradientbackground}>
         <form onSubmit={handleSubmit}>
-          <h2>Cadastro de Produto</h2>
+          <h2>PRODUCTS REGISTRATION</h2>
           <hr />
           <div className={style.container}>
             <div className={style.dir}>
