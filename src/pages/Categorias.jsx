@@ -27,7 +27,7 @@ export default function Categorias() {
 
   return (
     <>
-      <Header />
+      <Header titulo="Categorias" />
 
       <div className={style.imgContainer}>
         <img className={style.homeimg} src={quadracat} alt="" />
