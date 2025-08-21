@@ -129,6 +129,22 @@ body {
 
 }
 
+.cards,
+.cardsblack,
+.cardsblack2,
+.cards2,
+.cardespecial {
+  display: flex;
+  flex-wrap: wrap; /* <- permite quebrar linha */
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+  background-color: #2C2C2C;
+  padding: 40px;
+}
+
+
+
 .cardsblack {
     display: flex;
     align-items: center;
@@ -136,7 +152,6 @@ body {
     gap: 200px;
     margin-top: 0.0%;
     background-color: #2C2C2C;
-    height: 600px;
 
     p {
         display: flex;

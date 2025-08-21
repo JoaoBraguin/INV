@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from '../components/Header';
 
+import style from '../styles/EditatProduto.module.css'
+
+
 const api = axios.create({
   baseURL: "http://localhost:3333"
 });
@@ -115,87 +118,135 @@ export default function EditarProduto() {
 
   return (
     <>
-      <form onSubmit={editarProduto}>
-        <h2>Editar Produto</h2>
 
-        <label htmlFor="nome">Nome</label>
-        <input
-          type="text"
-          id="nome"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-          required
-        />
+      <div className={style.gradientbackground}>
 
-        <label htmlFor="descricao">Descrição</label>
-        <textarea
-          id="descricao"
-          value={descricao}
-          onChange={(e) => setDescricao(e.target.value)}
-          required
-        />
+        <form onSubmit={editarProduto} className={style.editarProduto}>
 
-        <label htmlFor="preco">Preço</label>
-        <input
-          type="number"
-          step="0.01"
-          id="preco"
-          value={preco}
-          onChange={(e) => setPreco(e.target.value)}
-          required
-        />
+          <div className={style.formEditarProduto}>
+            <div className={style.tittleEditarProduto}>
+              <img alt="" />
+              
+            </div>
 
-        <label htmlFor="quantidade">Quantidade</label>
-        <input
-          type="number"
-          id="quantidade"
-          value={quantidade}
-          onChange={(e) => setQuantidade(e.target.value)}
-        />
 
-        <label htmlFor="imagem">Atualizar imagem</label>
-        <input
-          type="file"
-          id="imagem"
-          accept="image/*"
-          onChange={(e) => setImagemFile(e.target.files[0])}
-        />
+            <div className={style.editarCampoProduto}>
+              <label htmlFor="nome">Editar nome do produto</label>
+              <input
+                type="text"
+                id="nome"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                required
+              />
+            </div>
 
-        {imagemUrlAtual && (
-          <div>
-            <p>Imagem atual:</p>
-            <img src={`http://localhost:3333${imagemUrlAtual}`} alt="Atual" width={120} />
+            <div className={style.EditarPreco}>
+              <label htmlFor="preco">Editar preço</label>
+              <input
+                type="number"
+                step="0.01"
+                id="preco"
+                value={preco}
+                onChange={(e) => setPreco(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className={style.editarQuant}>
+              <label htmlFor="quantidade">Editar quantidade</label>
+              <input
+                type="number"
+                id="quantidade"
+                value={quantidade}
+                onChange={(e) => setQuantidade(e.target.value)}
+              />
+            </div>
+
+            <div className={style.editarDesc}>
+              <label htmlFor="descricao">Editar descrição</label>
+              <input
+                id="descricao"
+                value={descricao}
+                onChange={(e) => setDescricao(e.target.value)}
+                required
+              />
+            </div>
+
+            <div className={style.catEditarProduto}>
+              <select
+                id="categoria"
+                value={categoriaId}
+                onChange={(e) => setCategoriaId(e.target.value)}
+              >
+                <option value="">Sem categoria</option>
+                {categorias.map(categoria => (
+                  <option key={categoria.id} value={categoria.id}>
+                    {categoria.name}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
-        )}
 
-        <label htmlFor="categoria">Categoria</label>
-        <select
-          id="categoria"
-          value={categoriaId}
-          onChange={(e) => setCategoriaId(e.target.value)}
-        >
-          <option value="">Sem categoria</option>
-          {categorias.map(categoria => (
-            <option key={categoria.id} value={categoria.id}>
-              {categoria.name}
-            </option>
-          ))}
-        </select>
+          <div className={style.partedois}>
 
-        <div className="botoes">
-          <button type="button" onClick={() => navigate(-1)}>
-            Cancelar
-          </button>
-          <button type="submit" disabled={!isValid || uploading}>
-            {uploading ? "Salvando..." : "Editar"}
-          </button>
-          <button type="button" onClick={deletarProduto}>
-            Deletar Produto
-          </button>
-        </div>
+            {/* Upload estilizado */}
 
-        {erro && <p style={{ color: "red" }}>{erro}</p>}
-      </form>
+            <div className={style.uploadContainer}>
+
+              {!imagemFile && imagemUrlAtual && (
+                <div className={style.imagemAtual}>
+                  <img
+                    src={`http://localhost:3333${imagemUrlAtual}`}
+                    alt="Imagem atual"
+                  />
+                </div>
+              )}
+
+              <input
+                type="file"
+                id="imagem"
+                accept="image/*"
+                onChange={(e) => setImagemFile(e.target.files[0])}
+                className={style.inputFile}
+              />
+
+              <label htmlFor="imagem" className={style.uploadLabel}>
+                Selecionar Imagem
+              </label>
+
+              {imagemFile && (
+                <p className={style.nomeArquivo}>{imagemFile.name}</p>
+              )}
+
+            </div>
+
+            <div className={style.botoes}>
+
+              <div className={style.btncancelar}>
+                <button type="button" onClick={() => navigate(-1)}>
+                  Cancelar
+                </button>
+              </div>
+
+              <div className={style.btnsalvar}>
+                <button type="submit" disabled={!isValid || uploading}>
+                  {uploading ? "Salvando..." : "Editar"}
+                </button>
+              </div>
+
+              <div className={style.btndeletar}>
+                <button type="button" onClick={deletarProduto}>
+                  Deletar
+                </button>
+              </div>
+            </div>
+
+            {erro && <p style={{ color: "red" }}>{erro}</p>}
+          </div>
+        </form>
+      </div>
     </>
   );
 }

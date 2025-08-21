@@ -140,9 +140,9 @@ export default function CadastroProduto() {
                   value={categoriaId}
                   onChange={(e) => setCategoriaId(e.target.value)}
                 >
-                 <dir className={style.cat}>
-                   <option value="">Selecione uma categoria</option>
-                 </dir>
+                  <dir className={style.cat}>
+                    <option value="">Selecione uma categoria</option>
+                  </dir>
                   {categorias.map(categoria => (
                     <option key={categoria.id} value={categoria.id}>
                       {categoria.name}
