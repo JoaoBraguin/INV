@@ -120,18 +120,14 @@ export default function EditarProduto() {
     <>
 
       <div className={style.gradientbackground}>
-
+        <div className={style.title}>
+          <h2>EDIT PRODUCTS</h2>
+        </div>
+        <hr />
         <form onSubmit={editarProduto} className={style.editarProduto}>
-
           <div className={style.formEditarProduto}>
-            <div className={style.tittleEditarProduto}>
-              <img alt="" />
-              
-            </div>
-
-
             <div className={style.editarCampoProduto}>
-              <label htmlFor="nome">Editar nome do produto</label>
+              <label htmlFor="nome">Edit product name</label>
               <input
                 type="text"
                 id="nome"
@@ -142,7 +138,7 @@ export default function EditarProduto() {
             </div>
 
             <div className={style.EditarPreco}>
-              <label htmlFor="preco">Editar preço</label>
+              <label htmlFor="preco">Edit price</label>
               <input
                 type="number"
                 step="0.01"
@@ -154,7 +150,7 @@ export default function EditarProduto() {
             </div>
 
             <div className={style.editarQuant}>
-              <label htmlFor="quantidade">Editar quantidade</label>
+              <label htmlFor="quantidade">Edit quantity</label>
               <input
                 type="number"
                 id="quantidade"
@@ -164,7 +160,7 @@ export default function EditarProduto() {
             </div>
 
             <div className={style.editarDesc}>
-              <label htmlFor="descricao">Editar descrição</label>
+              <label htmlFor="descricao">Edit description</label>
               <input
                 id="descricao"
                 value={descricao}
@@ -179,7 +175,7 @@ export default function EditarProduto() {
                 value={categoriaId}
                 onChange={(e) => setCategoriaId(e.target.value)}
               >
-                <option value="">Sem categoria</option>
+                <option value="">Uncategorized</option>
                 {categorias.map(categoria => (
                   <option key={categoria.id} value={categoria.id}>
                     {categoria.name}
@@ -213,7 +209,7 @@ export default function EditarProduto() {
               />
 
               <label htmlFor="imagem" className={style.uploadLabel}>
-                Selecionar Imagem
+                Select Image
               </label>
 
               {imagemFile && (
@@ -224,21 +220,21 @@ export default function EditarProduto() {
 
             <div className={style.botoes}>
 
-              <div className={style.btncancelar}>
+              <div className={style.button}>
                 <button type="button" onClick={() => navigate(-1)}>
-                  Cancelar
+                  Cancel
                 </button>
               </div>
 
-              <div className={style.btnsalvar}>
+              <div className={style.button}>
                 <button type="submit" disabled={!isValid || uploading}>
                   {uploading ? "Salvando..." : "Editar"}
                 </button>
               </div>
 
-              <div className={style.btndeletar}>
+              <div className={style.button}>
                 <button type="button" onClick={deletarProduto}>
-                  Deletar
+                  Delete
                 </button>
               </div>
             </div>

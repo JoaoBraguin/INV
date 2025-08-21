@@ -96,7 +96,7 @@ export default function Home() {
       </section>
       <section className={style.cardespecial2}>
         <div className={style.about3}>
-          <h2>T-Shirts</h2> <hr /> <a href="/produtos">View All</a>
+           <h2>Acessory</h2> <hr /><a href="/produtos">View All</a>
         </div>
         <div className={style.container}>
           <div className={style.card3}>

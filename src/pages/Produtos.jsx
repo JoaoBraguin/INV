@@ -110,7 +110,7 @@ export default function Produtos() {
       ))}
 
       <a className={style.bot} href='/cadastrar-produto'>
-        <FaPlusCircle className={style.svg2} size={15} /> Adicionar Produto
+        <FaPlusCircle className={style.svg2} size={15} /> Add Product
       </a>
 
       <Footer />
