@@ -6,13 +6,10 @@ body {
 .homeimg {
     display: flex;
 
-
-
     img {
         display: flex;
         width: 100%;
     }
-
 }
 
 .especialimg {
@@ -21,8 +18,6 @@ body {
     height: 700px;
     z-index: 5;
     object-fit: cover;
-
-
 }
 
 .special {
@@ -39,7 +34,6 @@ body {
         padding: 100px;
         font-weight: 20;
     }
-
 }
 
 .INV {
@@ -53,266 +47,30 @@ body {
 .nav {
     position: absolute;
     top: 0;
-    /* Ajuste a posição conforme necessário */
     left: 0;
     width: 100%;
     z-index: 2;
-    /* Está acima da imagem */
-
 }
 
+/* Wrapper externo colorido */
+.sectionWrapper {
+    padding: 40px 0;
+}
 
-
-.cardespecial {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 180px;
-    margin-top: 20px;
+/* Alternando cores no wrapper */
+.sectionWrapperRed {
     background-color: #2C2C2C;
+    height: 100vh;
+}
 
-
-
-
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        font-family: "Inter", sans-serif;
-        font-style: italic;
-    }
-
-    h6 {
-        margin: 7px;
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-    }
-
-    h2 {
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-    }
+.sectionWrapperBlue {
+    background-color: #CECECE;
+    margin-bottom: 90px;
 }
 
 
 
-.cards2 {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 200px;
-    margin-top: 0.0%;
-    background-color: #2C2C2C;
-    height: 600px;
-
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Inter", sans-serif;
-        font-style: italic;
-    }
-
-    h6 {
-        margin: 7px;
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-        font-size: 14px;
-    }
-
-    h2 {
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-    }
-
-
-
-}
-
-.cards,
-.cardsblack,
-.cardsblack2,
-.cards2,
-.cardespecial {
-  display: flex;
-  flex-wrap: wrap; /* <- permite quebrar linha */
-  justify-content: center;
-  gap: 40px;
-  margin: 40px auto;
-  background-color: #2C2C2C;
-  padding: 40px;
-}
-
-
-
-.cardsblack {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 200px;
-    margin-top: 0.0%;
-    background-color: #2C2C2C;
-
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Inter", sans-serif;
-        font-style: italic;
-    }
-
-    h6 {
-        margin: 7px;
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-        font-size: 14px;
-    }
-
-    h2 {
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-    }
-
-}
-
-.cardsblack2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 200px;
-    margin-top: 0.0%;
-
-    height: 600px;
-
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Inter", sans-serif;
-        font-style: italic;
-    }
-
-    h6 {
-        margin: 7px;
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-        font-size: 14px;
-    }
-
-    h2 {
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-    }
-
-}
-
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 200px;
-    margin: 1%;
-
-
-
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        font-family: "Inter", sans-serif;
-        font-style: italic;
-    }
-
-    h6 {
-        margin: 7px;
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-        font-size: 14px;
-    }
-
-    h2 {
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-    }
-}
-
-.cards2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 200px;
-    margin-top: -80px;
-    background-color: #2C2C2C;
-
-
-
-
-    p {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px;
-        font-family: "Inter", sans-serif;
-        font-style: italic;
-    }
-
-    h6 {
-        margin: 7px;
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-        font-size: 14px;
-    }
-
-    h2 {
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-    }
-}
-
-.about {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -4%;
-
-
-    h2 {
-        color: #ECBD64;
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-
-    }
-
-    hr {
-        width: 600px;
-    }
-}
-
-.about2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: -5%;
-
-
-    h2 {
-        color: #ECBD64;
-        font-weight: 200;
-        font-family: "Inter", sans-serif;
-
-    }
-
-    hr {
-        width: 600px;
-    }
-}
-
-
-
-
+/* Card individual */
 .card1 {
     background-color: white;
     padding: 30px;
@@ -337,7 +95,6 @@ body {
         display: flex;
         margin-left: 160px;
         color: #ffa600;
-
     }
 
     &:hover {
@@ -345,11 +102,7 @@ body {
         transition: .6s;
         object-fit: cover;
     }
-
-
 }
-
-
 
 h5 {
     display: flex;
@@ -357,8 +110,6 @@ h5 {
     padding: 5px;
     font-family: "Inter", sans-serif;
     margin-top: -30px;
-
-
 }
 
 .bot {
@@ -378,12 +129,67 @@ h5 {
     font-style: italic;
     gap: 12px;
 
-
-
-
     &:hover {
         cursor: pointer;
     }
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    
+    
 
 
+    h2 {
+        font-size: 2.1rem;      
+        color: #ECBD64;
+        font-family: "Inter", sans-serif;
+        text-shadow: 2px 2px 4px black; /* cria sombra preta para destacar */
+        font-weight: 200;
+        margin-top: -300px;
+     
+    }
+
+    hr {
+        width: 600px;
+        margin-top: -140px;
+        
+    }
+}
+
+/* Container interno centralizado com largura fixa */
+.cards {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -130px;
+    gap: 40px;
+
+    h2 {
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+    }
+
+    h6 {
+        font-weight: 200;
+        padding: 10px;
+        font-size: 14px;
+        font-family: "Inter", sans-serif;
+
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 200;
+        font-family: "Inter", sans-serif;
+        font-style: italic;
+        font-size: 18px;
+    }
 }

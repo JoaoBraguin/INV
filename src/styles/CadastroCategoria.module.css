@@ -56,7 +56,7 @@
     border: none; /* remove a borda cinza */
     outline: none; /* remove o contorno ao focar */
     flex: 1;
-    
+    color: white;
 }
 
 /* Textarea */

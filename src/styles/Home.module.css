@@ -283,14 +283,15 @@ body {
         color: white;
         font-weight: 200;
         font-family: "Inter", sans-serif;
-        margin-left: 20px;
-        margin: 100px;
+        margin-top: 20px;   /* só em cima */
+        margin-left: 320px;   /* só à esquerda */
         text-decoration: none;
-
+    
         &:hover {
             text-decoration: underline;
         }
     }
+    
 
     hr {
         width: 1200px;

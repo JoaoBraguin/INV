@@ -27,26 +27,16 @@ export default function Produtos() {
         const categorias = resCategorias.data;
         const produtos = resProdutos.data;
 
-        console.log("Categorias carregadas:", categorias);
-        console.log("Produtos carregados:", produtos);
-
-        // Mapear categorias por ID para nome
         const mapaCategorias = {};
         categorias.forEach(cat => {
           mapaCategorias[cat.id] = cat.name;
         });
 
-        console.log("Mapa de categorias (id -> nome):", mapaCategorias);
-
-        // Adicionar nome da categoria a cada produto
         const produtosComCategoria = produtos.map(prod => ({
           ...prod,
           categoria_nome: mapaCategorias[prod.categoryId] || "Outros"
         }));
 
-        console.log("Produtos com categoria adicionada:", produtosComCategoria);
-
-        // Agrupar produtos por nome da categoria
         const agrupado = {};
         produtosComCategoria.forEach(prod => {
           if (!agrupado[prod.categoria_nome]) {
@@ -54,8 +44,6 @@ export default function Produtos() {
           }
           agrupado[prod.categoria_nome].push(prod);
         });
-
-        console.log("Produtos agrupados por categoria:", agrupado);
 
         setProdutosPorCategoria(agrupado);
         setCarregando(false);
@@ -68,24 +56,21 @@ export default function Produtos() {
     carregarDados();
   }, []);
 
-
-
   const renderProdutoCard = (produto) => (
     <div key={produto.id} className={style.card1}>
       <img src={`http://localhost:3333${produto.imageUrl}`} alt={produto.name} />
       <h2>{produto.name}</h2>
       <div className={style.icone}>
-        <h6>{produto.description}</h6> <a href={`/editar-produto/${produto.id}`}><FaRegEdit size={30} /></a>
+        <h6>{produto.description}</h6>
+        <a href={`/editar-produto/${produto.id}`}><FaRegEdit size={30} /></a>
         <h5>Quantity : {produto.quantity}</h5>
       </div>
       <hr />
       <p>$ {parseFloat(produto.price).toFixed(2)}</p>
-    </div>
+    </div >
   );
 
-  if (carregando) {
-    return <p>Carregando produtos...</p>;
-  }
+  if (carregando) return <p>Carregando produtos...</p>;
 
   return (
     <>
@@ -96,16 +81,17 @@ export default function Produtos() {
       <Header titulo="Products" />
 
       {Object.entries(produtosPorCategoria).map(([categoriaNome, produtos], index) => (
-        <div key={categoriaNome}>
+        <div
+          key={categoriaNome}
+          className={`${style.sectionWrapper} ${index % 2 === 0 ? style.sectionWrapperRed : style.sectionWrapperBlue}`}
+        >
           <div className={style.about}>
             <hr /><h2>{categoriaNome}</h2><hr />
           </div>
 
-          <section className={
-            index % 2 === 0 ? style.cards : style.cardsblack
-          }>
+          <div className={style.cards}>
             {produtos.map(renderProdutoCard)}
-          </section>
+          </div>
         </div>
       ))}
 
