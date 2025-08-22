@@ -90,7 +90,7 @@ export default function EditarCategoria() {
                   onChange={(e) => setNome(e.target.value)}
                 />
               </div>
-              <div className={style.campo}>
+              <div className={style.campo2}>
                 <label htmlFor="descricao">Description :</label>
                 <textarea
                   name="descricao"
@@ -102,9 +102,9 @@ export default function EditarCategoria() {
                 />
               </div>
               <div className={style.botoes}>
-                <button type="button" onClick={() => navigate(-1)}>Cancelar</button>
-                <button type="submit" disabled={!isValid}>Editar</button>
-                <button onClick={() => deletarCategoria()}>Deletar Categoria</button>
+                <button type="button" onClick={() => navigate(-1)}>Cancel</button>
+                <button type="submit" disabled={!isValid}>Edit</button>
+                <button onClick={() => deletarCategoria()}>Delet a Category</button>
               </div>
             </dir>
           </div>

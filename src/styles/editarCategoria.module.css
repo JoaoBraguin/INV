@@ -118,10 +118,26 @@
 .campo{
     display: flex;
     align-items: center;
-    margin: 10px;
     gap: 12px;
     height: 40px;
     margin: 20px;
+    
+}
+
+.campo2{
+    display: flex;
+    align-items: center;
+  
+    gap: 12px;
+    height: 40px;
+    margin: 20px;
+    
+    textarea{
+        width: 400px;
+        height: 100px;
+        padding: 10px;
+        
+    }
     
 }
 

@@ -9,19 +9,19 @@ export default function Footer() {
           <img src={INV} />
         </div>
         <h2>INV Basketball</h2>
-        <p>Juntos no jogo. Fortes na quadra.</p>
+        <p>Together in the game. Strong on the court.</p>
 
         <div className={style.footerLinks}>
-          <a href="#">Sobre</a>
-          <a href="#">Contato</a>
-          <a href="#">Loja</a>
-          <a href="#">Eventos</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Store</a>
+          <a href="#">Events</a>
         </div>
 
         <hr />
 
         <p className={style.footerCopy}>
-          &copy; 2025 INV Sports. Todos os direitos reservados.
+          &copy; 2025 INV Sports. All rights reserved.
         </p>
       </div>
     </footer>

@@ -91,10 +91,11 @@
   min-height: 200px;
 
   h1 {
+         
+    font-size: 2.1rem;      
     color: #ECBD64;
-    font-family: "Inter", sans-serif;
-    font-size: 2.3rem;
-    margin-top: -25px;
+    text-shadow: 2px 2px 4px black; /* cria sombra preta para destacar */
+    font-weight: 200;
     
 
 

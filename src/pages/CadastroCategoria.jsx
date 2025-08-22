@@ -36,7 +36,7 @@ export default function CadastroCategoria() {
     <>
       <dir className={style.gradientbackground}>
         <form action="" onSubmit={handleSubmit}>
-          <h2>Cadastro de categoria</h2>
+          <h2>CATEGORY REGISTRATION</h2>
           <hr />
           <dir className={style.container}>
             <dir className={style.esq}>
@@ -68,10 +68,10 @@ export default function CadastroCategoria() {
                 <button type="button"
                   onClick={() => navigate(-1)}
                 >
-                  Cancelar
+                  Cancel
                 </button>
                 <button type="submit" disabled={!isValid} >
-                  Salvar
+                  Save
                 </button>
               </div>
             </dir>

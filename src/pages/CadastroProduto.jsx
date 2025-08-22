@@ -79,7 +79,7 @@ export default function CadastroProduto() {
             </div>
             <dir className={style.esq}>
               <dir className={style.campo}>
-                <label htmlFor="nome">Nome</label>
+                <label htmlFor="nome">Name :</label>
                 <input
                   type="text"
                   id="nome"
@@ -90,7 +90,7 @@ export default function CadastroProduto() {
               </dir>
 
               <dir className={style.campo}>
-                <label htmlFor="descricao">Descrição</label>
+                <label htmlFor="descricao">Description :</label>
                 <textarea
                   id="descricao"
                   value={descricao}
@@ -100,7 +100,7 @@ export default function CadastroProduto() {
               </dir>
 
               <dir className={style.campo}>
-                <label htmlFor="preco">Preço</label>
+                <label htmlFor="preco">Price :</label>
                 <input
                   type="number"
                   step="0.01"
@@ -112,7 +112,7 @@ export default function CadastroProduto() {
               </dir>
 
               <dir className={style.campo}>
-                <label htmlFor="quantidade">Quantidade</label>
+                <label htmlFor="quantidade">Quantity :</label>
                 <input
                   type="number"
                   id="quantidade"
@@ -123,7 +123,7 @@ export default function CadastroProduto() {
               </dir>
 
               <dir className={style.campo}>
-                <label htmlFor="imagem">Imagem do Produto</label>
+                <label htmlFor="imagem">Upload Image :</label>
                 <input
                   type="file"
                   id="imagem"
@@ -134,14 +134,14 @@ export default function CadastroProduto() {
               </dir>
 
               <dir className={style.campo}>
-                <label htmlFor="categoria">Categoria</label>
+                <label htmlFor="categoria">Category :</label>
                 <select
                   id="categoria"
                   value={categoriaId}
                   onChange={(e) => setCategoriaId(e.target.value)}
                 >
                   <dir className={style.cat}>
-                    <option value="">Selecione uma categoria</option>
+                    <option value="">Select a category</option>
                   </dir>
                   {categorias.map(categoria => (
                     <option key={categoria.id} value={categoria.id}>
@@ -153,10 +153,10 @@ export default function CadastroProduto() {
 
               <div className={style.botoes}>
                 <button type="button" onClick={() => navigate(-1)}>
-                  Cancelar
+                  Cancel
                 </button>
                 <button type="submit" disabled={!isValid || uploading}>
-                  {uploading ? "Salvando..." : "Salvar"}
+                  {uploading ? "Salvando..." : "Save"}
                 </button>
               </div>
 
