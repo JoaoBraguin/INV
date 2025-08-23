@@ -30,7 +30,7 @@
 .verticalLine {
   width: 1.5px;
   height: 40px;
-  background-color: #ECBD64;
+  color: #ffa600;
 }
 
 
@@ -54,7 +54,7 @@
   white-space: nowrap;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ECBD64;
+  color: #ffa600;
   text-shadow: 1px 1px 3px black;
 }
 
@@ -93,7 +93,7 @@
   h1 {
          
     font-size: 2.1rem;      
-    color: #ECBD64;
+    color: #ffa600;
     text-shadow: 2px 2px 4px black; /* cria sombra preta para destacar */
     font-weight: 200;
     

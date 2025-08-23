@@ -122,16 +122,39 @@ export default function CadastroProduto() {
                 />
               </dir>
 
-              <dir className={style.campo}>
-                <label htmlFor="imagem">Upload Image :</label>
+              <div className={style.campo}>
+                <label htmlFor="imagem" className={style.uploadLabel}>
+                  Upload Image :
+                </label>
+
                 <input
                   type="file"
                   id="imagem"
                   accept="image/*"
-                  onChange={(e) => setImagemFile(e.target.files[0])}
+                  onChange={(e) => {
+                    const file = e.target.files?.[0] ?? null;
+                    setImagemFile(file);
+                  }}
                   required
+                  className={style.inputFile}
                 />
-              </dir>
+
+                <span className={style.fileName}>
+                  {imagemFile ? imagemFile.name : ""}
+                </span>
+
+                {imagemFile && (
+                  <div className={style.preview}>
+                    <img
+                      src={URL.createObjectURL(imagemFile)}
+                      alt="Preview"
+                      className={style.previewImg}
+                    />
+                  </div>
+                )}
+              </div>
+
+
 
               <dir className={style.campo}>
                 <label htmlFor="categoria">Category :</label>
